@@ -34,13 +34,16 @@ npm run test
 
 ### Controller
 
-* ProductDisplay : 상품전시 Controller
-* MoneyInsertion : 금전투입 Controller
-* Console : 콘솔 Controller
+* ProductDisplayController : 상품전시 Controller
+* MoneyInsertionController : 금전투입 Controller
+* ConsoleController : 콘솔 Controller
 
 ### View
 
-* ProductDisplay : 상품전시 View
-* MoneyInsertion : 금전투입 View
-* Console : 콘솔 View
+* ProductDisplayView : 상품전시 View
+* MoneyInsertionView : 금전투입 View
+* ConsoleView : 콘솔 View
 
+### Component
+
+* VendingMachineComponent : 자판기 Component

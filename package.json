@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "setup": "npm install -g webpack && npm install",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config-page.js --progress --colors --open --hot",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config-page.js --progress --colors --open --hot --host 0.0.0.0",
     "watch": "webpack --config ./webpack.config.js --progress --colors --watch",
     "prebuild": "eslint lib pretest",
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --colors --hide-modules&& cp public/* dist/",
@@ -54,6 +54,7 @@
     "webpack-dev-server": "^2.2.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
     "lodash": "^4.17.4"
   },
   "shim": {
