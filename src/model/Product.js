@@ -47,15 +47,6 @@ class Product {
   }
 
   /**
-   * @description Set price
-   * @type {Number}
-   * @member Product#price
-   */
-  set price(price) {
-    this._price = price;
-  }
-
-  /**
    * @description Get stock
    * @type {Number}
    * @member Product#stock

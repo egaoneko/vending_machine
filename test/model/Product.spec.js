@@ -42,12 +42,6 @@ describe('Product', () => {
       assert.strictEqual(product.price, expectedPrice);
     });
 
-    it('set price', () => {
-      const expectedNewPrice = 200;
-      product.price = expectedNewPrice;
-      assert.strictEqual(product.price, expectedNewPrice);
-    });
-
     it('get stock', () => {
       assert.strictEqual(product.stock, expectedStock);
     });
