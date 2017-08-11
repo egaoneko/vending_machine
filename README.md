@@ -25,7 +25,7 @@ npm run test
         * Stock : 재고 (1~3)
     * MoneyBox : 돈통 Model
         * TotalAmount : 투입된 금액 (Max 3000)
-        * TotalAmountTypes : 투입된 금액 종류 수 (Max Bill 2)
+        * MoneyTypeSizeMap : 투입된 금액 종류 수 (Max Bill 2)
 * Wallet : 지갑 Model
     * TotalAmount : 보유 금액 (10000)
 * Money : 금액 Model (50, 100, 500, 1000)
