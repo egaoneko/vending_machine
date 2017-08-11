@@ -1,0 +1,15 @@
+temp
+.tmp
+.sass-cache
+.DS_Store
+npm-debug.log
+
+node_modules
+src/bower_components
+test/bower_components
+package
+coverage
+
+.idea
+*.iml
+
