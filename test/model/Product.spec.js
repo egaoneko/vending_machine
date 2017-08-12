@@ -51,5 +51,25 @@ describe('Product', () => {
       product.stock = expectedNewStock;
       assert.strictEqual(product.stock, expectedNewStock);
     });
+
+    it('has stock', () => {
+      product = new Product(
+        expectedId,
+        expectedName,
+        expectedPrice,
+        1
+      );
+      assert.isTrue(product.hasStock());
+    });
+
+    it('has not stock', () => {
+      product = new Product(
+        expectedId,
+        expectedName,
+        expectedPrice,
+        0
+      );
+      assert.isFalse(product.hasStock());
+    });
   });
 });

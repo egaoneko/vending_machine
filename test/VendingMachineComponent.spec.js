@@ -3,6 +3,8 @@ import VendingMachineComponent from "../src/VendingMachineComponent";
 import ProductDisplayView from "../src/view/ProductDisplayView";
 import MoneyInsertionView from "../src/view/MoneyInsertionView";
 import ConsoleView from "../src/view/ConsoleView";
+import ProductController from "../src/controller/ProductController";
+import InsertionController from "../src/controller/InsertionController";
 
 let assert = chai.assert;
 
@@ -42,6 +44,8 @@ describe('VendingMachineComponent', () => {
       assert.isTrue(vendingMachineComponent._productDisplayView instanceof ProductDisplayView);
       assert.isTrue(vendingMachineComponent._moneyInsertionView instanceof MoneyInsertionView);
       assert.isTrue(vendingMachineComponent._consoleView instanceof ConsoleView);
+      assert.isTrue(vendingMachineComponent._productController instanceof ProductController);
+      assert.isTrue(vendingMachineComponent._insertionController instanceof InsertionController);
     });
 
     it('element', () => {

@@ -63,6 +63,14 @@ class Product {
   set stock(stock) {
     this._stock = stock;
   }
+
+  /**
+   * @description has stock
+   * @method Product#hasStock
+   */
+  hasStock() {
+    return this._stock > 0;
+  }
 }
 
 export default Product;

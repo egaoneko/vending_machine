@@ -2,6 +2,7 @@ import chai from "chai";
 import MoneyInsertionView from "../../src/view/MoneyInsertionView";
 import MoneyBox from "../../src/model/MoneyBox";
 import Wallet from "../../src/model/Wallet";
+import event from '../../src/event';
 
 let assert = chai.assert;
 
@@ -22,12 +23,13 @@ describe('MoneyInsertionView', () => {
     moneyBox = new MoneyBox();
     wallet = new Wallet(10000);
 
-    moneyInsertionView = new MoneyInsertionView(vmComponent, moneyBox, wallet);
+    moneyInsertionView = new MoneyInsertionView(vmComponent, event, moneyBox, wallet);
   });
 
   describe('Create', () => {
     it('constructor', () => {
       assert.strictEqual(moneyInsertionView._moneyBox, moneyBox);
+      assert.strictEqual(moneyInsertionView._event, event);
       assert.strictEqual(moneyInsertionView._wallet, wallet);
       assert.strictEqual(moneyInsertionView._bills.length, 4);
     });

@@ -18,11 +18,11 @@
     </div>
   </div>
 </body>
-<script src="./eventListener.polyfill,min.js"></script>
+<script src="./eventListener.polyfill.min.js"></script>
 <script src="vending_machine.js"></script>
 <script>
-  window.onload = function () {
+  window.addEventListener('load', function () {
     new vm.VendingMachineComponent('vm');
-  };
+  });
 </script>
 </html>

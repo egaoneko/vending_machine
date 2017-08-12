@@ -21,6 +21,15 @@ class Wallet {
   get totalAmount() {
     return this._totalAmount;
   }
+
+  /**
+   * @description Set totalAmount
+   * @type {Number}
+   * @member Wallet#totalAmount
+   */
+  set totalAmount(totalAmount) {
+    this._totalAmount = totalAmount;
+  }
 }
 
 export default Wallet;

@@ -7,9 +7,10 @@ class ConsoleView {
   /**
    * @description ConsoleView constructor.
    * @param {Element} vmElement vending machine element
+   * @param {Object} event event
    * @constructs ConsoleView
    */
-  constructor(vmElement) {
+  constructor(vmElement, event) {
     if (!vmElement || !(vmElement instanceof Element)) {
       throw new Error("Can not found element.");
     }
@@ -20,6 +21,7 @@ class ConsoleView {
       throw new Error("Can not found element.");
     }
 
+    this._event = event;
     this._init();
   }
 

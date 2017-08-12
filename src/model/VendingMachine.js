@@ -33,6 +33,25 @@ class VendingMachine {
   get moneyBox() {
     return this._moneyBox;
   }
+
+  /**
+   * @description is sale available
+   * @param {Number} price price
+   * @return {Boolean} is sale available
+   * @method VendingMachine#isSaleAvailable
+   */
+  isSaleAvailable(price) {
+    return this._moneyBox.isSaleAvailable(price);
+  }
+
+  /**
+   * @description is insertion available
+   * @param {MoneyBox} money money
+   * @method VendingMachine#isInsertionAvailable
+   */
+  isInsertionAvailable(money) {
+    return this._moneyBox.isInsertionAvailable(money);
+  }
 }
 
 export default VendingMachine;

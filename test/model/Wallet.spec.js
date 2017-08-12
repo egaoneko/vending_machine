@@ -25,5 +25,10 @@ describe('Wallet', () => {
     it('get totalAmount', () => {
       assert.strictEqual(wallet.totalAmount, 10000);
     });
+
+    it('set totalAmount', () => {
+      wallet.totalAmount = 0;
+      assert.strictEqual(wallet.totalAmount, 0);
+    });
   });
 });

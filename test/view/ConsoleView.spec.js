@@ -1,5 +1,6 @@
 import chai from "chai";
 import ConsoleView from "../../src/view/ConsoleView";
+import event from '../../src/event';
 
 let assert = chai.assert;
 
@@ -14,11 +15,12 @@ describe('ConsoleView', () => {
     element.className += "console";
 
     vmComponent.appendChild(element);
-    consoleView = new ConsoleView(vmComponent);
+    consoleView = new ConsoleView(vmComponent, event);
   });
 
   describe('Create', () => {
     it('constructor', () => {
+      assert.strictEqual(consoleView._event, event);
     });
 
     it('element', () => {

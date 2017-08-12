@@ -1,6 +1,7 @@
 import chai from "chai";
 import ProductDisplayView from "../../src/view/ProductDisplayView";
 import productService from '../../src/service/ProductService.js';
+import event from '../../src/event';
 
 let assert = chai.assert;
 
@@ -17,11 +18,12 @@ describe('ProductDisplayView', () => {
     products = productService.getProducts();
 
     vmComponent.appendChild(element);
-    productDisplayView = new ProductDisplayView(vmComponent, products);
+    productDisplayView = new ProductDisplayView(vmComponent, event, products);
   });
 
   describe('Create', () => {
     it('constructor', () => {
+      assert.strictEqual(productDisplayView._event, event);
       assert.strictEqual(productDisplayView._products, products);
     });
 
