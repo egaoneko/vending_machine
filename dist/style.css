@@ -1,0 +1,148 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.vending_machine {
+  margin: auto;
+  width: 800px;
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.product_display {
+  text-align: center;
+  width: 100%;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+.product {
+  display: inline-block;
+  width: 20%;
+  height: 150px;
+  border: 2px solid red;
+  padding: 10px;
+  margin: 6px;
+}
+
+.product_soldout {
+  background-color: #FF00FF
+}
+
+.product_name {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  border: 2px solid #FFA800;
+  margin-bottom: 3px
+}
+
+.product_price {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid #FFA800;
+}
+
+.product_name:hover,
+.product_price:hover {
+  background-color: #FFA800;
+}
+
+.money_insertion {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 330px;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+.insertion {
+  text-align: right;
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  top: 80px;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.insertion_amount {
+  width: 100%;
+  margin: 0 0 0 -20px;
+}
+
+.return_btn {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  bottom: 20px;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.return_btn:hover {
+  background-color: red;
+}
+
+.wallet_box {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  right: 0px;
+  margin: 10px;
+  border: 2px solid red;
+}
+
+.bill_box {
+  width: 350px;
+  height: 45px;
+  margin: 10px;
+  border: 2px solid #FFA800;
+}
+
+.bill {
+  vertical-align: top;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px; 
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.bill_amount {
+  display: inline-block;
+  width: 310px;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px; 
+  border: 2px solid #FF0000;
+}
+
+.wallet {
+  width: 350;
+  height: 35px;
+  line-height: 35px;
+  margin: 0px 10px 10px 10px;
+  border: 2px solid #04FF00;
+}
+
+.console {
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.console_area {
+  width: 100%;
+  height: 100%;
+}
