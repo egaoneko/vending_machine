@@ -76,7 +76,7 @@ class ProductDisplayView {
     productNameElement.className += "product_name";
 
     let productPriceElement = document.createElement('div');
-    productPriceElement.innerText = product.price + ` (${product.stock})`;
+    productPriceElement.innerText = product.price;
     productPriceElement.className += "product_price";
 
     productElement.appendChild(productNameElement);
