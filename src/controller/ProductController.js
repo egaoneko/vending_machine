@@ -25,20 +25,21 @@ class ProductController {
    * @method ProductController#_selectProduct
    */
   _selectProduct(product, productElement) {
+    this._event.writeConsole.dispatch(`${product.name}을(를) 선택하셨습니다.`);
     if(!product.hasStock()) {
-      // log
+      this._event.writeConsole.dispatch(`${product.name}은(는) 품절입니다.`);
       return;
     }
 
     if(!this._vendingMachine.isSaleAvailable(product.price)) {
-      // log
+      this._event.writeConsole.dispatch('돈이 모자랍니다.');
       return;
     }
 
     product.stock -= 1;
     this._event.updateInsertion.dispatch(-product.price);
     this._event.updateProductElement.dispatch(product, productElement);
-    // log
+    this._event.writeConsole.dispatch(`${product.name}이(가) 나왔다.`);
   }
 }
 

@@ -42,14 +42,14 @@ class InsertionController {
   _insertMoney(money) {
     if (!this._vendingMachine.isInsertionAvailable(money)) {
       this._returnMoney(money.amount);
+      this._event.writeConsole.dispatch('더 이상 돈이 들어가지 않습니다.');
       return;
-      // log
     }
 
     this._updateInsertion(money.amount);
     const size = this._vendingMachine.moneyBox.moneyTypeSizeMap.get(money.type);
     this._vendingMachine.moneyBox.moneyTypeSizeMap.set(money.type, size + 1);
-    // log
+    this._event.writeConsole.dispatch(`${money.amount}을 넣었습니다.`);
   }
 
   /**
@@ -72,14 +72,15 @@ class InsertionController {
   _returnMoney(amount) {
     if (amount !== undefined) {
       this._wallet.totalAmount += amount;
+      this._event.writeConsole.dispatch('더이상 넣을 수 없는 돈이 반환되었습니다.');
     } else {
       this._wallet.totalAmount += this._vendingMachine.moneyBox.totalAmount;
       this._vendingMachine.moneyBox.totalAmount = 0;
       this._vendingMachine.moneyBox.resetMoneyTypeSizeMap();
       this._event.updateInsertionElement.dispatch(this._vendingMachine.moneyBox);
+      this._event.writeConsole.dispatch('돈이 반환되었습니다.');
     }
     this._event.updateWalletElement.dispatch(this._wallet);
-    // log
   }
 }
 

@@ -35,8 +35,25 @@ class ConsoleView {
 
     let consoleElement = document.createElement('div');
     consoleElement.className += "console";
+
+    let consoleAreaElement = document.createElement('textarea');
+    consoleAreaElement.className += "console_area";
+    consoleAreaElement.disabled = true;
+    consoleElement.appendChild(consoleAreaElement);
+    this._event.writeConsole.add(this._writeConsole.bind(consoleAreaElement));
+
     docFragment.appendChild(consoleElement);
     this._element.appendChild(docFragment);
+  }
+
+  /**
+   * @private
+   * @description _writeConsole
+   * @method ConsoleView#_writeConsole
+   */
+  _writeConsole(message) {
+    this.innerHTML += `${message}\n`;
+    this.scrollTop = this.scrollHeight;
   }
 }
 

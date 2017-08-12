@@ -193,6 +193,8 @@ class MoneyInsertionView {
 
       if (MoneyInsertionView._isCollision(rect1, rect2)) {
         MoneyInsertionView._event.insertMoney.dispatch(MoneyInsertionView.target, MoneyInsertionView._isCollision(rect1, rect2));
+      } else {
+        MoneyInsertionView._event.writeConsole.dispatch('돈을 떨어뜨렸습니다.');
       }
       MoneyInsertionView.target = null;
     }
