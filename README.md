@@ -47,3 +47,11 @@ npm run test
 ### Component
 
 * VendingMachineComponent : 자판기 Component
+
+## Sample page
+
+* [Sample page](https://egaoneko.github.io/vending_machine/dist/index.html?dummy=true)
+
+## 미구현
+
+* IE8 지원
