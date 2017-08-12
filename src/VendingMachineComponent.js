@@ -26,14 +26,36 @@ class VendingMachineComponent {
       throw new Error("Can not found element.");
     }
 
-    this._vendingMachine = new VendingMachine(productService.getProducts());    
+    this._vendingMachine = new VendingMachine(productService.getProducts());
     this._wallet = new Wallet(10000);
-    this._productDisplayView = new ProductDisplayView(this._element, event, this._vendingMachine.products);
-    this._moneyInsertionView = new MoneyInsertionView(this._element, event, this._vendingMachine.moneyBox, this._wallet);
+    this._productDisplayView = new ProductDisplayView(this._element, event,
+      this._vendingMachine.products);
+    this._moneyInsertionView = new MoneyInsertionView(this._element, event,
+      this._vendingMachine.moneyBox, this._wallet);
     this._consoleView = new ConsoleView(this._element, event);
 
     this._productController = new ProductController(event, this._vendingMachine);
-    this._insertionController = new InsertionController(event, this._vendingMachine, this._wallet);
+    this._insertionController = new InsertionController(event, this._vendingMachine,
+      this._wallet);
+
+    this._preventDragAndRightClick();
+  }
+
+  /**
+   * @private
+   * @description prevent Drag And Right Click
+   * @method VendingMachineComponent#_preventDragAndRightClick
+   */
+  _preventDragAndRightClick() {
+    document.oncontextmenu = function () {
+      return false;
+    };
+    document.onselectstart = function () {
+      return false;
+    };
+    document.ondragstart = function () {
+      return false;
+    };
   }
 }
 
